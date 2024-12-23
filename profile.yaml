@@ -1,0 +1,48 @@
+# -1 signifie une diffusion (broadcast)
+model:
+    name: "Sybil Profile"
+    width: 10
+    height: 10
+    seed: null 
+    normal_to_sybil_interaction_chance: 0.5
+    confidence_score: 0.9
+
+agents:
+  agent.WSNAgent:
+    - id: 0
+      x: 0
+      y: 0
+      color: "black"
+      seed: null
+      identities: [0, 10, 20]  # L'agent 0 simule plusieurs identités (attaque Sybil)
+    - id: 1
+      x: 5
+      y: 5
+      color: "black"
+      seed: null
+    - id: 2
+      x: 1
+      y: 5
+      color: "black"
+      seed: null
+    - id: 3
+      x: 0
+      y: 8
+      color: "black"
+      seed: null
+    - id: 4
+      x: 8
+      y: 0
+      color: "black"
+      seed: null
+    - id: 5
+      x: 1
+      y: 1
+      color: "black"
+      seed: null
+    - id: 6
+      x: 4
+      y: 4
+      color: "red"
+      seed: null
+      identities: [30, 40, 50]  # L'agent 6 est également un nœud Sybil
